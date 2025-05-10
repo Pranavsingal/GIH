@@ -1,7 +1,7 @@
-🛍️ Dokan – Your Digital Dukaan
+#**🛍️ Dokan – Your Digital Dukaan**
 Dokan is a lightweight, full-featured digital retail solution built for Indian kirana stores. Developed during the Global Innovation Hackathon, it empowers shop owners with tools for inventory, billing, and customer management — all in one place.
 
-⚡ The Problem
+#⚡ The Problem
 Indian small retailers face daily challenges:
 
 ❌ Manual inventory leads to 20–25% losses
@@ -10,7 +10,7 @@ Indian small retailers face daily challenges:
 
 📉 Weak customer engagement and growth
 
-✅ Our Solution
+#✅ Our Solution
 Dokan brings a modern, user-friendly platform that:
 
 📦 Tracks stock in real-time
@@ -21,7 +21,7 @@ Dokan brings a modern, user-friendly platform that:
 
 All accessible on any device, no special hardware required.
 
-✨ Key Features
+#✨ Key Features
 Inventory Management: Alerts, stock levels, low-stock reports
 
 Billing & Accounting: Auto-GST, downloadable invoices
@@ -49,14 +49,14 @@ Cross-device: Runs on mobile, tablet, desktop
 
 ⏱️ Cut billing time by half
 
-🚀 Tech Stack
+#🚀 Tech Stack
 Layer	Technology
 Frontend	HTML, CSS, JS (via Flask templates)
 Backend	Python, Flask
 Database	CSV files using Pandas
 AI Module	Python, Pandas, SKLearn
 
-🧪 How to Run Locally
+#🧪 How to Run Locally
 bash
 Copy
 Edit
@@ -75,17 +75,17 @@ pip install -r requirements.txt
 python app.py
 Visit http://127.0.0.1:5000 in your browser.
 
-🎯 Vision & Mission
+#🎯 Vision & Mission
 Vision: Empower India's 13M+ local retailers with digital tools
 
 Mission: Build a simple, scalable, accessible platform to modernize retail
 
-👥 Team
+#👥 Team
 Pranav Singal – frontend & Backend
 
 Ankit Choudhary – AI & ML Systems
 
 Ranvir Tyagi – Frontend Integration & Content
 
-📜 License
+#📜 License
 This project is under the MIT License – free to use and modify.
