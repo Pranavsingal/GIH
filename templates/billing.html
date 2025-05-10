@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>💰 Billing</h2>
+
+<!-- Billing Form -->
+<form method="POST">
+  <label for="product_id">Product</label>
+  <select name="product_id" id="product_id" required>
+    <option value="">Select Product</option>
+    {% for item in items %}
+      <option value="{{ item.id }}">{{ item.name }} (₹{{ item.price }})</option>
+    {% endfor %}
+  </select>
+
+  <label for="quantity">Quantity</label>
+  <input type="number" id="quantity" name="quantity" placeholder="Quantity" required>
+
+  <button type="submit">Add to Cart</button>
+</form>
+
+<!-- Display Cart -->
+<h3>Your Cart</h3>
+<ul>
+  {% for product, quantity, price in cart %}
+    <li>{{ product }} x {{ quantity }}: ₹{{ price }}</li>
+  {% endfor %}
+</ul>
+
+<h3>Total: ₹{{ total }}</h3>
+
+<form method="POST" action="/checkout">
+  <button type="submit">Checkout</button>
+</form>
+
+{% endblock %}
