@@ -1,5 +1,6 @@
-#**🛍️ Dokan – Your Digital Dukaan**
-Dokan is a lightweight, full-featured digital retail solution built for Indian kirana stores. Developed during the Global Innovation Hackathon, it empowers shop owners with tools for inventory, billing, and customer management — all in one place.
+#🛍️ Dokan – Your Digital Dukaan
+
+*Dokan* is a lightweight, full-featured digital retail solution built for Indian kirana stores. Developed during the Global Innovation Hackathon, it empowers shop owners with tools for inventory, billing, and customer management — all in one place.
 
 #⚡ The Problem
 Indian small retailers face daily challenges:
