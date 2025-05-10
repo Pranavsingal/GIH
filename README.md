@@ -1,7 +1,3 @@
-Here’s a polished and well-structured version of your project write-up for **Dokan – Your Digital Dukaan**. It maintains clarity, impact, and a professional tone while improving flow and formatting:
-
----
-
 # 🛍️ Dokan – Your Digital Dukaan
 
 **Dokan** is a lightweight, full-featured digital retail solution designed specifically for Indian *kirana* (grocery) stores. Developed during the **Global Innovation Hackathon**, Dokan equips small shop owners with an all-in-one platform for **inventory**, **billing**, and **customer management**.
@@ -131,7 +127,3 @@ Build a simple, scalable platform to modernize Indian retail — one *dukaan* at
 ## 📜 License
 
 This project is licensed under the **MIT License** — open to use and modify freely.
-
----
-
-Would you like a one-page PDF or PPT-style slide version of this for sharing or presentations?
