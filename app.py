@@ -31,6 +31,7 @@ def home():
 
 
 @app.route('/inventory', methods=['GET', 'POST'])
+@app.route('/inventory', methods=['GET', 'POST'])
 def inventory():
     items = read_csv(CSV_FILE)
 
@@ -55,16 +56,9 @@ def inventory():
         write_csv(CSV_FILE, data)
         return redirect(url_for('inventory'))
 
-    # AI Integration with Fallbacks
-    suggestions = recommend_products(items) or {}
-    stockout_predictions = predict_stockout(items) or []
-    sales_forecast = predict_sales(items) or []
+    # No AI/ML Integration here anymore
+    return render_template('inventory.html', items=items)
 
-    return render_template('inventory.html',
-                           items=items,
-                           suggestions=suggestions,
-                           stockout_predictions=stockout_predictions,
-                           sales_forecast=sales_forecast)
 
 
 @app.route('/billing', methods=['GET', 'POST'])
@@ -108,10 +102,20 @@ def dashboard():
     items = read_csv(CSV_FILE)
     sales_data = read_csv(SALES_FILE)
     feedback_data = read_csv(FEEDBACK_FILE)
+
+    # AI Integration
+    suggestions = recommend_products(items) or {}
+    stockout_predictions = predict_stockout(items) or []
+    sales_forecast = predict_sales(items) or []
+
     return render_template('dashboard.html',
                            items=items,
                            sales_data=sales_data,
-                           feedback_data=feedback_data)
+                           feedback_data=feedback_data,
+                           suggestions=suggestions,
+                           stockout_predictions=stockout_predictions,
+                           sales_forecast=sales_forecast)
+
 
 
 if __name__ == '__main__':

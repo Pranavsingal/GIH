@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block content %}
 
+{% block content %}
 
 <!-- Add New Product / Update Existing Product -->
 <form method="POST">
@@ -16,7 +16,6 @@
 </form>
 
 <!-- Display Inventory -->
-
 <table>
   <h2>Current Inventory</h2>
   <thead>
@@ -47,27 +46,6 @@
   </tbody>
 </table>
 
-<!-- AI-driven Suggestions -->
-<h2>AI Suggestions</h2>
-<h4>Recommended Products:</h4>
-<ul>
-  {% for suggestion in suggestions %}
-    <li>{{ suggestion.item }}: Recommended with {{ suggestion.recommended_items }}</li>
-  {% endfor %}
-</ul>
 
-<h4>Stockout Predictions:</h4>
-<ul>
-  {% for stockout in stockout_predictions %}
-    <li>{{ stockout.item }}: Stockout in {{ stockout.days_until_stockout }} days</li>
-  {% endfor %}
-</ul>
-
-<h4>Sales Forecast:</h4>
-<ul>
-  {% for product, predicted_sales in sales_forecast.items() %}
-    <li>{{ product }}: Forecasted sales = {{ predicted_sales }}</li>
-  {% endfor %}
-</ul>
 
 {% endblock %}

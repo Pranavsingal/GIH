@@ -1,7 +1,9 @@
 import pandas as pd
 from collections import defaultdict
 
+
 def recommend_products(items):
+    # Load transactions data
     transactions = pd.read_csv('data/transactions.csv')
 
     # Convert all item_ids to strings for consistent comparison
@@ -17,6 +19,11 @@ def recommend_products(items):
                 item_pairs[pair] += 1
 
     recommendations = []
+
+    # Build a map of item id to name once to avoid repetition
+    id_to_name = {str(item['id']): item['name'] for item in items}
+
+    # Loop through each item in the input
     for item in items:
         item_id = str(item['id'])  # ensure consistent type
         related = {}
@@ -28,15 +35,18 @@ def recommend_products(items):
             elif b == item_id:
                 related[a] = count
 
-        # Sort related items by count
+        # Sort related items by count (descending)
         sorted_related = sorted(related.items(), key=lambda x: x[1], reverse=True)
-        recommended_items = [r[0] for r in sorted_related[:3]]  # Top 3 recommendations
+
+        # If no recommendations found, show a default recommendation
+        if not sorted_related:
+            recommended_items = ["Try adding more items to get recommendations."]
+        else:
+            recommended_items = [id_to_name[r[0]] for r in sorted_related[:3]]  # Top 3 recommendations
 
         recommendations.append({
-            'item': item['name'],
+            'item': id_to_name[item_id],
             'recommended_items': recommended_items
         })
-    # Create ID → Name map
-    id_to_name = {str(item['id']): item['name'] for item in items}
 
     return recommendations
